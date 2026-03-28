@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Fucking Business History </title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Georgia, serif; background: #f5f0e8; min-height: 100vh; padding: 20px; color: #1a1a1a; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .header { text-align: center; padding: 32px 0 24px; border-bottom: 2px solid #1a1a1a; margin-bottom: 28px; }
+  .header h1 { font-size: 24px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .header p { font-size: 13px; color: #555; letter-spacing: 1px; }
+  .start-screen { text-align: center; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+  .assign-card { background: #fff; border: 1px solid #d0c9bc; padding: 16px; text-align: left; }
+  .assign-card .label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+  .assign-card .count { font-size: 28px; font-weight: bold; color: #1a1a1a; }
+  .assign-card .sub { font-size: 12px; color: #888; }
+  .filter-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 20px 0; }
+  .filter-btn { padding: 7px 16px; border: 1px solid #bbb; background: #fff; font-family: Georgia, serif; font-size: 13px; cursor: pointer; transition: all 0.15s; }
+  .filter-btn:hover { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .filter-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .start-btn { padding: 13px 40px; background: #1a1a1a; color: #fff; border: none; font-family: Georgia, serif; font-size: 15px; cursor: pointer; letter-spacing: 1px; margin-top: 8px; }
+  .start-btn:hover { background: #333; }
+
+  .quiz-screen { display: none; }
+  .progress-wrap { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  .progress-bg { flex: 1; height: 4px; background: #d0c9bc; }
+  .progress-fill { height: 4px; background: #1a1a1a; transition: width 0.3s; }
+  .progress-text { font-size: 12px; color: #888; white-space: nowrap; letter-spacing: 0.5px; }
+  .badge { display: inline-block; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; background: #1a1a1a; color: #fff; padding: 3px 10px; margin-bottom: 14px; }
+  .q-num { font-size: 12px; color: #888; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .q-text { font-size: 17px; line-height: 1.65; margin-bottom: 22px; color: #1a1a1a; }
+  .options { display: flex; flex-direction: column; gap: 10px; }
+  .opt-btn { text-align: left; padding: 12px 16px; border: 1px solid #c8c0b0; background: #fff; font-family: Georgia, serif; font-size: 14px; line-height: 1.5; cursor: pointer; transition: all 0.15s; color: #1a1a1a; }
+  .opt-btn:hover:not(:disabled) { border-color: #1a1a1a; background: #fafaf5; }
+  .opt-btn.correct { background: #e8f5e0; border-color: #4a8a2a; color: #2a5a10; }
+  .opt-btn.wrong { background: #fce8e8; border-color: #a83030; color: #6a1515; }
+  .opt-btn:disabled { cursor: default; }
+  .feedback { margin-top: 14px; padding: 10px 14px; font-size: 14px; border-left: 3px solid; }
+  .feedback.ok { border-color: #4a8a2a; background: #e8f5e0; color: #2a5a10; }
+  .feedback.bad { border-color: #a83030; background: #fce8e8; color: #6a1515; }
+  .bottom-row { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; }
+  .score-inline { font-size: 13px; color: #888; }
+  .next-btn { padding: 10px 28px; background: #1a1a1a; color: #fff; border: none; font-family: Georgia, serif; font-size: 14px; cursor: pointer; }
+  .next-btn:hover { background: #333; }
+
+  .result-screen { display: none; text-align: center; padding: 20px 0; }
+  .result-screen h2 { font-size: 20px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+  .big-score { font-size: 72px; font-weight: bold; color: #1a1a1a; line-height: 1; margin: 16px 0 4px; }
+  .grade { font-size: 16px; color: #555; margin-bottom: 24px; }
+  .result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0 28px; }
+  .result-card { background: #fff; border: 1px solid #d0c9bc; padding: 16px; }
+  .result-card .rnum { font-size: 32px; font-weight: bold; }
+  .result-card .rlbl { font-size: 12px; color: #888; letter-spacing: 0.5px; margin-top: 2px; }
+  .result-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .outline-btn { padding: 10px 24px; background: #fff; border: 1px solid #1a1a1a; font-family: Georgia, serif; font-size: 14px; cursor: pointer; }
+  .outline-btn:hover { background: #f5f0e8; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Indian Fucking Business History</h1>
+  </div>
+
+  <div class="start-screen" id="startScreen">
+    <div class="grid">
+      <div class="assign-card"><div class="label">Assignment 01</div><div class="count">11</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 02</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 03</div><div class="count">9</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 04</div><div class="count">9</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 05</div><div class="count">12</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 06</div><div class="count">11</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 07</div><div class="count">8</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 08</div><div class="count">9</div><div class="sub">questions</div></div>
+    </div>
+    <p style="font-size:13px;color:#666;margin-bottom:16px;">Select a set or attempt all questions:</p>
+    <div class="filter-row" id="filterRow">
+      <button class="filter-btn active" onclick="setFilter('all',this)">All 79</button>
+      <button class="filter-btn" onclick="setFilter('quick',this)">Quick Test (10 Qs)</button>
+      <button class="filter-btn" onclick="setFilter('01',this)">Assignment 01</button>
+      <button class="filter-btn" onclick="setFilter('02',this)">Assignment 02</button>
+      <button class="filter-btn" onclick="setFilter('03',this)">Assignment 03</button>
+      <button class="filter-btn" onclick="setFilter('04',this)">Assignment 04</button>
+      <button class="filter-btn" onclick="setFilter('05',this)">Assignment 05</button>
+      <button class="filter-btn" onclick="setFilter('06',this)">Assignment 06</button>
+      <button class="filter-btn" onclick="setFilter('07',this)">Assignment 07</button>
+      <button class="filter-btn" onclick="setFilter('08',this)">Assignment 08</button>
+    </div>
+    <button class="start-btn" onclick="startQuiz()">Begin Test →</button>
+  </div>
+
+  <div class="quiz-screen" id="quizScreen">
+    <div class="progress-wrap">
+      <div class="progress-bg"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <div class="progress-text" id="progressText">0 / 0</div>
+    </div>
+    <div class="badge" id="assignBadge">Assignment 01</div>
+    <div class="q-num" id="qNum">Question 1 of 79</div>
+    <div class="q-text" id="qText"></div>
+    <div class="options" id="optionsDiv"></div>
+    <div id="feedbackDiv"></div>
+    <div class="bottom-row">
+      <div class="score-inline" id="scoreInline">0 correct</div>
+      <button class="next-btn" id="nextBtn" style="display:none" onclick="nextQ()">Next →</button>
+    </div>
+  </div>
+
+  <div class="result-screen" id="resultScreen">
+    <h2>Test Complete</h2>
+    <div class="big-score" id="bigScore">0%</div>
+    <div class="grade" id="gradeText"></div>
+    <div class="result-grid">
+      <div class="result-card"><div class="rnum" id="rCorrect">0</div><div class="rlbl">Correct</div></div>
+      <div class="result-card"><div class="rnum" id="rWrong">0</div><div class="rlbl">Incorrect</div></div>
+      <div class="result-card"><div class="rnum" id="rTotal">0</div><div class="rlbl">Total</div></div>
+    </div>
+    <div class="result-btns">
+      <button class="outline-btn" onclick="goStart()">← Menu</button>
+      <button class="start-btn" onclick="startQuiz()">Retry</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const Q = [
+  {a:"01",q:"A historian studying the same period of Indian business history as another historian may arrive at different conclusions primarily because:",o:["The lectures provided to them were incomplete.","Their personal research interests and the sources they prioritise differ, leading to selective emphasis on different types of evidence.","One historian is more competent than the other.","Historical facts change over time."],ans:1},
+  {a:"01",q:"Oral history sources differ from traditional printed archival sources in that they:",o:["Provide evidence exclusively from the contemporary period, and cannot inform understanding of past centuries.","Rely on human testimonies and recorded interviews, which capture perspectives and details that may not be documented in official written records.","Are stored in archives, whereas printed sources are kept in libraries.","Require less rigorous verification and interpretation by historians compared to written documents."],ans:1},
+  {a:"01",q:"An archive, in the context of historical research, can be defined as:",o:["An institutional repository—formal or informal—of documents and materials that historians use to reconstruct past events and understand historical processes.","A collection of published books and articles written by historians about past events.","A physical space where only government-produced official records are stored and made available to the public.","A digital database that automatically organises historical information without requiring a historian's interpretation."],ans:0},
+  {a:"01",q:"The rapid political fragmentation of the Mughal Empire after 1707 had which of the following consequences for economic activity in the Indian subcontinent?",o:["It led to increased trading opportunities and economic prosperity.","It resulted in the dissolution of centralised authority, which disrupted unified regional markets and restricted business opportunities.","It strengthened the infrastructure for commercial operations.","It had no significant impact on economic conditions."],ans:1},
+  {a:"01",q:"Why is periodisation considered a complicated task in history?",o:["Historical events do not always follow a linear pattern; conditions and patterns often recur across different periods, making clear boundaries difficult to establish","Most historians now reject periodisation entirely in favour of studying continuous historical processes without any temporal divisions","Periodisation is a recent invention that historians still haven't learned to use properly","New sources discovered in recent decades have made all existing historical periods completely invalid"],ans:0},
+  {a:"01",q:"Trading records and shipping manifests from mercantile enterprises are valuable historical sources because they reveal:",o:["Only the prices of commodities that were traded.","Evidence of commodity exchange, as well as the political relationships and power dynamics that shaped economic activities.","The personal preferences of individual merchants.","Information that is irrelevant to understanding history."],ans:1},
+  {a:"01",q:'The absence of infrastructure "in the Western sense" in the Indian subcontinent during the later Mughal period meant that:',o:["Economic activity remained localised within isolated regional markets without institutional connectivity across the subcontinent","The state lacked the capacity to enforce uniform standards for weights, measures, and currency, fragmenting inter-regional trade mechanisms","Physical infrastructure, like roads and harbours, did not exist, limiting most forms of commerce","Market efficiency was determined primarily by geographical distance rather than regulatory or institutional factors"],ans:1},
+  {a:"01",q:'The geographical question of where India\'s business history "begins" is problematic because:',o:["Historical evidence only exists for business activities in northern India during the Mughal period","Historians have only recently begun studying regional business centres outside of major colonial cities","Different areas of the subcontinent contributed distinctly to India's commercial networks at different historical moments, so no single region can be identified as the sole origin","Maritime trade was less significant than land-based trade routes in shaping India's business history"],ans:2},
+  {a:"01",q:"Business culture, as a component of Indian business history, refers to:",o:["The religious practices of merchants.","A society's attitudes toward entrepreneurship and the values it assigns to business communities, which shape the flourishing or decline of economic enterprises.","The physical appearance of markets and shops.","Only the food preferences of business owners."],ans:1},
+  {a:"01",q:"The establishment of the East India Company's first warehouse/factory at Surat in 1608 is considered significant because it:",o:["Was the first instance of any trade occurring between Europe and India.","Marked the beginning of institutionalised European business operations in India, distinct from earlier sporadic trader visits.","Ended all indigenous Indian business activities.","Had no long-term impact on the Indian economy."],ans:1},
+  {a:"01",q:"India's current maritime and economic partnerships with regions such as Southeast Asia and West Asia can be understood as:",o:["Completely new developments with no historical precedent.","Solely the result of 20th-century colonisation.","Continuations of centuries-old maritime trading traditions that existed before European arrival in India.","Irrelevant to understanding Indian business history."],ans:2},
+  {a:"02",q:"In which year did the East India Company's monopoly over Indian trade end, allowing independent merchants and traders to establish their own trading ventures and financial institutions?",o:["1813","1765","1857","1776"],ans:0},
+  {a:"02",q:"When did the East India Company first gain the right to collect revenue (diwani) in Bengal and Bihar?",o:["1795","1813","1765","1757"],ans:2},
+  {a:"02",q:"The Royal Charter granted to the East India Company in 1600 served as:",o:["A legal, state-backed document that authorised the EIC to conduct overseas trading operations and engage in commercial activities in non-British markets.","A religious mandate from the Church of England.","A guarantee of military support from the British Crown.","A declaration of war against the Mughal Empire."],ans:0},
+  {a:"02",q:"During the Industrial Revolution in Britain, the transformation of labour organisation in factory settings involved:",o:["Exclusively replacing human workers with machines, eliminating the need for labour management systems.","The systematic organisation of workers into timetables, wage systems, and production schedules designed to maximise manufacturing output for domestic and international markets.","Maintaining traditional craft production methods while introducing new energy sources.","Voluntary participation by labourers without any formal organisational structures."],ans:1},
+  {a:"02",q:"The process of de-industrialisation in India during the 1700-1850 period was primarily driven by:",o:["Deliberate policies of the Indian regional kingdoms to abandon textile manufacturing.","The flood of cheaper, machine-made British textiles into Indian markets, which displaced indigenous artisans and caused immiseration—economic impoverishment, including loss of wages, markets, and occupations.","The preference of Indian merchants to abandon manufacturing in favor of agricultural pursuits.","A natural decline in demand for Indian goods across Europe without external factors."],ans:1},
+  {a:"02",q:"The triangular trade system employed by the East India Company (opium to China → tea purchase → sale in Europe) was economically advantageous primarily because it:",o:["Provided equal economic benefits to all parties involved in the exchange.","Eliminated competition from other European trading companies.","Required large quantities of British capital and silver to be transported abroad for each transaction.","Allowed the EIC to extract profits while relying almost entirely on Indian resources and labor, thereby preventing precious metals and capital from leaving Britain."],ans:3},
+  {a:"02",q:"Forbes & Co., established in 1767, represented which of the following?",o:["One of the oldest Agency Houses in the western subcontinent, marking the emergence of a new European banking and financial institution model.","An Indian-owned merchant company predating European settlement.","A purely agricultural enterprise with no involvement in international trade.","The first government-owned trading enterprise in India."],ans:0},
+  {a:"02",q:"Speculation in Agency House business operations during this period can best be described as:",o:["Conservative, low-risk investment strategies based on proven market demand.","A form of gambling with no legitimate economic purpose.","High-risk investments in enterprises such as indigo cultivation and tobacco export based on projected future earnings rather than established market realities, exposing investors to significant losses if international circumstances changed.","Investment decisions made entirely without any analytical framework or projection methods."],ans:2},
+  {a:"02",q:"The concentration of Agency Houses in specific port cities such as Calcutta, Bombay, and Madras can be understood as a reflection of:",o:["Random choice by merchants with no rational economic basis.","Restrictions imposed by the EIC preventing merchants from settling in inland areas.","The superior climate and geography of port cities for business operations.","The principle that capital gravitates toward centers of political and financial control."],ans:3},
+  {a:"02",q:"Which among the following best describes why Agency Houses struggled to maintain institutional stability across different regions?",o:["The Jagat Seths monopolized all banking services and refused to cooperate with European firms.","The absence of uniform legal frameworks, accounting standards, and regulatory oversight allowed individual agency houses to operate independently without accountability.","Asian trading markets were inherently unstable and could not support any form of organized financial institution.","Regional Indian governments actively prevented European merchants from establishing standardized business practices."],ans:1},
+  {a:"03",q:"The first railway link in India was developed between _______.",o:["Thane and Surat","Bombay and Thane","Bombay and Madras","Bombay and Surat"],ans:1},
+  {a:"03",q:"The primary reason the East India Company invested heavily in the opium trade with China was to:",o:["Generate revenue that could be used to purchase tea from China for resale in European and American markets.","Fulfil a legal obligation established by the British government.","Develop healthcare products for the Chinese population.","Support Indian farmers by guaranteeing them a stable market for opium cultivation."],ans:0},
+  {a:"03",q:"Generate revenue that could be used to purchase tea from China for resale in European and American markets.",o:["BR Ambedkar","M K Gandhi","Pandit Jawaharlal Nehru","Dadabhai Naoroji"],ans:3},
+  {a:"03",q:"Dadabhai Naoroji is famous for which economic theory?",o:["Drain Theory","Neo-Marxist Theory","Cultural Theory","None of the above"],ans:0},
+  {a:"03",q:"Under which treaty/alliance was Bombay transferred to Britain by the Portuguese?",o:["None of the above","Anglo-Portuguese Treaty","The marital alliance between England and Portugal","The Peace of Westphalia"],ans:2},
+  {a:"03",q:"Calcutta was designated as the capital of British India in which year?",o:["1773","1800","1765","1750"],ans:0},
+  {a:"03",q:"The American Civil War (1861-1865) affected Bombay's economy by:",o:["Disrupting American cotton supplies to Britain, creating demand for raw cotton from the Bombay Presidency.","Destroying Bombay's opium trade permanently.","Reducing British interest in Indian commerce.","Introducing entirely new industries unrelated to previous trades."],ans:0},
+  {a:"03",q:"Which community emerged as the wealthiest in Bombay during 1750-1850?",o:["Anglo-Indian businessmen","Parsi community","Marwadi traders","Muslim traders from Kutch"],ans:1},
+  {a:"03",q:"Cotton textile mills in Bombay and Ahmedabad during the mid-nineteenth century were characterized by:",o:["Absence of any technological innovation.","Exclusively British ownership and management.","Complete dependence on foreign technological expertise for all operations.","Collaboration between Indian and British capital, with many mills eventually under Indian ownership."],ans:3},
+  {a:"04",q:"When was the Indian National Congress established?",o:["1947","1857","1885","1905"],ans:2},
+  {a:"04",q:"Which of the following best describes the reasons behind the Swadeshi Movement?",o:["Greater realization that colonial trade practices benefited only the British state","Imposition of tariff barriers and British tax policies favoring British industries","British government's tax actions provoking political anger among Indians","All of the above"],ans:3},
+  {a:"04",q:"Swadeshi Mills was founded by __________.",o:["Jehangir Ratanji Dadabhoy Tata","Rama Prasad Goenka","Jamshedji Tata","Azim Hashim Prem"],ans:2},
+  {a:"04",q:"When was the Punjab National Bank established?",o:["1894","1889","1901","1895"],ans:0},
+  {a:"04",q:"Gopal Krishna Gokhale was the founder of __________.",o:["Prarthana Samaj","None of the above","Servants of India Society","Ramakrishna Mission"],ans:2},
+  {a:"04",q:"The deregulation of the Mineral Policy in 1899 primarily opened which sector to Indian entrepreneurs?",o:["Coal mining and mineral extraction","Textile manufacturing","Shipping and maritime commerce","Cotton trade"],ans:0},
+  {a:"04",q:"The Tata Iron and Steel Company was formally registered in which year?",o:["1903","1907","1899","1911"],ans:1},
+  {a:"04",q:"The Taj Mahal Hotel, opened by the Tatas in 1903, was significant because:",o:["It marked the end of British control over the hospitality industry","It was the first hotel built in India","It was the first luxury hospitality venture entirely managed and financed by an Indian entrepreneur","It was built to cater exclusively to British officials"],ans:2},
+  {a:"04",q:"Which Indian business house opened its first export office in London in 1917?",o:["The Tata Group","The Birla Group","The Reliance Group","The Godrej Group"],ans:1},
+  {a:"05",q:"Which among the following statements about the First World War is false?",o:["Being a stable, wealth-producing colony, India did not get involved in the World War","It led to a boom in business and manufacturing to help war efforts","Imperialism and colonialism were major factors behind making a European war into a world conflict","Many Indian business houses emerged to supplement domestic demand"],ans:0},
+  {a:"05",q:"Why did the assassination of the Austrian Duke and Duchess in 1914 lead to a world war?",o:["The assassination disrupted international trade routes, forcing economic warfare","It activated the European alliance systems, creating a \"domino effect\" of declarations of war","Germany used the incident to justify territorial expansion into Asia","Austria-Hungary immediately declared war on all European powers"],ans:1},
+  {a:"05",q:"Which among the following statements regarding post-World War developments in Indian business landscape is false?",o:["There was expansion and diversification of Indian industrial capital, leading to gradual displacement of British capital by Indian capital","None of the above","An Indian Industrial Commission was set up to provide preferential treatment to British enterprises and control emerging Indian businesses","The formalization of entrepreneurs' economic influence into political and executive spheres was an important feature"],ans:2},
+  {a:"05",q:"Which country among the following was an Axis power during the Second World War?",o:["France","The USSR","United States of America","Japan"],ans:3},
+  {a:"05",q:"When did Mahatma Gandhi launch the Quit India Movement?",o:["1942","1941","1945","1935"],ans:0},
+  {a:"05",q:"The Oberoi Group was involved in which sector?",o:["Textile","Hospitality","Automobile","Aviation"],ans:1},
+  {a:"05",q:"Walchand Hirachand was associated with which enterprise?",o:["The DCM Group","Hindustan Aircraft Factory","Tata Airlines","Taj Hotel"],ans:1},
+  {a:"05",q:"Which of the following statements regarding post-1945 Indian business scenario is true?",o:["Post-1945 years saw the rise of multinational companies through Indian and Western capital collaboration","New people and regions of India entered the Indian business that were not significant previously","Neither of the options is true","Both the options are true"],ans:3},
+  {a:"05",q:"Which of the following statements about the shift of India's capital to New Delhi is true?",o:["It was announced in 1911 at the Delhi Durbar by the British sovereign","It was a political strategy to move away from radical politics in Calcutta","It involved the construction of Lutyens Delhi from 1911 to 1931","All of the above"],ans:3},
+  {a:"05",q:"The Mahindra and Muhammad group (later Mahindra and Mahindra) was primarily involved in which sector when established in 1945?",o:["Steel imports","Heavy engineering goods","Automobile Manufacturing","All of the above"],ans:3},
+  {a:"05",q:'Which among the following best describes the concept of "discriminating protection" in post-First World War India?',o:["It aimed to control and limit emerging Indian businesses","It protected British industries from Indian competition","It imposed protective duties on Indian industries like steel to safeguard them from foreign competition during wartime","None of the above"],ans:2},
+  {a:"05",q:"Which of the following statements about the Montague-Chelmsford Reforms of 1919 are true?",o:["They introduced bicameral legislatures in Indian provinces","They classified subjects of governance into center reserved, state list, and concurrent categories","They granted voting rights to all Indian citizens","Both A and B"],ans:3},
+  {a:"06",q:"Which among the following was not an objective of the National Planning Committee (NPC)?",o:["Doubling living standards in 10 years","National Self-Sufficiency","Strong state role in the economy","Profit before service"],ans:3},
+  {a:"06",q:"Which among the following statements is true?",o:["The second five-year plan was drafted by PC Mahalanobis","The focus of the second five-year plan was agricultural growth","The focus of the first five-year plan was industrial growth","None of the above"],ans:0},
+  {a:"06",q:"Which among the following was not a feature of the Bombay Plan (1944)?",o:["Government should focus on monopoly market development rather than large-scale planning","Poverty alleviation must be an important focus","Private sector should play a fair role supplemented by the public sector","State must focus on removal of inequality from society"],ans:0},
+  {a:"06",q:"Which among the following was not a feature of the Industrial Policy Resolution of 1956?",o:["It led to a three-fold division of industries","Focus was laid upon regional development","It focused on reduction of economic disparities","The central focus was developing Indian consumer goods industries"],ans:3},
+  {a:"06",q:"Who was responsible for the nationalization of banks in India?",o:["Indira Gandhi","Jawaharlal Nehru","Lal Bahadur Shastri","PC Mahalanobis"],ans:0},
+  {a:"06",q:"Which among the following statements about post-independence critiques of India's planning is false?",o:["Ecological critiques condemned big state projects for environmental and livelihood damage","Marxists criticized Indian planning for failing to involve the state radically and insufficient labor mobilization","Liberal thinkers criticized planning because strong state roles hindered private sector development","Gandhians were happy with heavy industrialization but wanted it only in rural areas"],ans:3},
+  {a:"06",q:"The Diesel Locomotives Works was founded in 1961 in which city?",o:["Varanasi","Lucknow","Asansol","Delhi"],ans:0},
+  {a:"06",q:"Which of the following statements about the First Five-Year Plan are true?",o:["It emphasized agricultural expansion and food security","It received criticism during the 1952 elections for focusing on agriculture","It focused exclusively on industrial growth and heavy industries","Both b and c"],ans:3},
+  {a:"06",q:'The concept of "Schedule A" in the Industrial Policy Resolution of 1956 referred to which type of industries?',o:["Industries exclusively under state responsibility including heavy industries and defense","Industries under private sector responsibility","Industries reserved for cooperative sector management","Industries under shared state and private sector responsibility"],ans:0},
+  {a:"06",q:"Which among the following were priorities of the Second Five-Year Plan (1956-1961)?",o:["Development of basic heavy industries","To expand the scope of public sector","Focus on health, education, housing, and unemployment reduction","All of the above"],ans:3},
+  {a:"06",q:"Which among the following statements about the impact of India's independence and partition on planning is true?",o:["Independence eliminated the need for economic planning","Partition and refugee crisis made planning essential for rehabilitation and stabilization","Planning concepts originated solely after 1947","Both A and C"],ans:1},
+  {a:"07",q:"Which among the following was not a feature of \"License Raj\"?",o:["Official directives controlled economic and commercial operations in India","It restricted businesses to safeguard the state's role in extending critical services","It was unanimously praised by Indian business houses as the most important policy for private sector development","All of the above"],ans:2},
+  {a:"07",q:"Which of the following statements regarding 1950s-1960s are true?",o:["MNCs and foreign businesses exited the Indian market due to prevailing uncertainty","Many Indian business houses started investing in markets outside India","Both A and B","Neither A nor B"],ans:2},
+  {a:"07",q:"Which statements regarding the Monopolies and Restrictive Trade Practices Act (1970) are true?",o:["Business groups with assets more than Rs 200 crore could not expand","It aimed to ensure key sectors do not fall prey to monopoly concentration","Both A and B","Neither A nor B"],ans:2},
+  {a:"07",q:"Which among the following statements regarding Industrial Licensing Policy 1970 is true?",o:["Industries were divided among four groups based on investment levels","In heavy investment industries, government decided ownership on a case-by-case basis","All industries with capital less than Rs 1 crore were delicensed","Middle investment industries used a licensing system"],ans:0},
+  {a:"07",q:"Operation Flood is:",o:["A scheme to control flood water","A mission programme for milk production and distribution","A scheme for irrigation distribution","None of these"],ans:1},
+  {a:"07",q:"Which of the following best describes the \"white revolution\"?",o:["Government takeover of dairy industries","Social, cultural, institutional, and ideological transformation focused on food security and gender equality","Exclusive urban dairy development","Increased milk production and distribution"],ans:1},
+  {a:"07",q:"The 1971 general elections in Indian politics are significant because:",o:["They marked a generational shift in Indian political leadership","New leaders brought fresh economic visions and social mobilization ideas","They influenced subsequent industrial policy frameworks","All of the above"],ans:3},
+  {a:"07",q:"Which among the following statements regarding the 1970s-1980s economic context is false?",o:["Bank nationalization aimed to extend rural banking services","Licensing policies were relaxed to encourage private sector growth","New sectors like textiles successfully adapted to licensing regimes","Political contexts shaped economic and entrepreneurial reforms"],ans:1},
+  {a:"08",q:"Which among the following were the primary reasons for undertaking economic liberalization in India during the 1990s?",o:["Dwindling foreign reserves and sagging exports","Need to dismantle inhibitory licensing and regulatory frameworks","Both a and b","None of the above"],ans:2},
+  {a:"08",q:"Which individual served as a Planning Commission member and RBI Governor, playing a key institutional role in reforms?",o:["C. Rangarajan","Montek Singh Ahluwalia","N.R. Narayan Murthy","Rajiv Gandhi"],ans:0},
+  {a:"08",q:"Infosys was founded in which year?",o:["1999","1991","1982","1975"],ans:2},
+  {a:"08",q:"The \"demonstration effect\" in the post-1991 software industry refers to:",o:["Only government enterprises succeeding","Government demonstrating superior planning","Infosys's early success inspiring other IT companies to emerge","Software companies demonstrating loyalty to government"],ans:2},
+  {a:"08",q:"Which sectors exhibited symbiotic relationships in the post-liberalization period?",o:["Automobile and insurance sectors","Software and BPO/E-commerce sectors","Banking and telecommunications sectors","All of the above"],ans:3},
+  {a:"08",q:"Which global paradigm most decisively influenced India's shift toward liberalization?",o:["European subsidies","Chinese agricultural exports","Japanese industrial dominance","US-led liberal capitalism post-Cold War"],ans:3},
+  {a:"08",q:"The rise of India's private sector post-1991 was driven by which cultural shift?",o:["Entrepreneurs seen as providers of employment","Business success viewed as demonstration of individual potential","Entrepreneurship perceived as patriotic activity","All of the above"],ans:3},
+  {a:"08",q:"Which of the following sectors did NOT significantly benefit from 1991 liberalization?",o:["Software and IT services","Telecommunications","Private healthcare","All these sectors benefited significantly"],ans:3},
+  {a:"08",q:"One of the primary aims of studying Indian business history is:",o:["Assimilation of historical facts","To be equipped with analytical tools to understand contemporary issues while recognising historical roots","To criticize all forms of business","To prove India's past was glorious"],ans:1}
+];
+
+let filter = "all", questions = [], cur = 0, answered = false, score = 0, wrong = 0;
+const labels = ["a","b","c","d"];
+
+function setFilter(f, btn) {
+  filter = f;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+function startQuiz() {
+  if (filter === "all") {
+    questions = [...Q];
+  } else if (filter === "quick") {
+    // Shuffle the entire array and slice 10 questions
+    let shuffled = [...Q].sort(() => 0.5 - Math.random());
+    questions = shuffled.slice(0, 10);
+  } else {
+    questions = Q.filter(q => q.a === filter);
+  }
+  
+  cur = 0; answered = false; score = 0; wrong = 0;
+  document.getElementById("startScreen").style.display = "none";
+  document.getElementById("resultScreen").style.display = "none";
+  document.getElementById("quizScreen").style.display = "block";
+  renderQ();
+}
+
+function renderQ() {
+  const q = questions[cur];
+  const total = questions.length;
+  document.getElementById("progressFill").style.width = (cur/total*100)+"%";
+  document.getElementById("progressText").textContent = cur+" / "+total;
+  
+  // Show the assignment number even in mixed/quick tests
+  document.getElementById("assignBadge").textContent = filter === "quick" || filter === "all" ? "Assignment " + q.a : "Assignment " + q.a;
+  
+  document.getElementById("qNum").textContent = "Question "+(cur+1)+" of "+total;
+  document.getElementById("qText").textContent = q.q;
+  document.getElementById("feedbackDiv").innerHTML = "";
+  document.getElementById("nextBtn").style.display = "none";
+  document.getElementById("scoreInline").textContent = score+" correct";
+  answered = false;
+  const div = document.getElementById("optionsDiv");
+  div.innerHTML = q.o.map((opt,i) =>
+    `<button class="opt-btn" onclick="pick(${i})">${labels[i]}. ${opt}</button>`
+  ).join("");
+}
+
+function pick(i) {
+  if(answered) return;
+  answered = true;
+  const q = questions[cur];
+  const btns = document.querySelectorAll(".opt-btn");
+  btns.forEach(b => b.disabled = true);
+  btns[q.ans].classList.add("correct");
+  if(i !== q.ans) { btns[i].classList.add("wrong"); wrong++; }
+  else score++;
+  document.getElementById("scoreInline").textContent = score+" correct";
+  document.getElementById("feedbackDiv").innerHTML =
+    `<div class="feedback ${i===q.ans?'ok':'bad'}">${i===q.ans?"✓ Correct!":"✗ Incorrect — the correct answer is highlighted."}</div>`;
+  document.getElementById("nextBtn").style.display = "block";
+  document.getElementById("nextBtn").textContent = cur < questions.length-1 ? "Next →" : "See Results →";
+}
+
+function nextQ() {
+  cur++;
+  if(cur < questions.length) renderQ();
+  else showResult();
+}
+
+function showResult() {
+  document.getElementById("quizScreen").style.display = "none";
+  document.getElementById("resultScreen").style.display = "block";
+  const pct = Math.round(score/questions.length*100);
+  document.getElementById("bigScore").textContent = pct+"%";
+  document.getElementById("gradeText").textContent = pct>=90?"Excellent!":pct>=70?"Good work!":pct>=50?"Keep practicing!":"Needs more review";
+  document.getElementById("rCorrect").textContent = score;
+  document.getElementById("rWrong").textContent = wrong;
+  document.getElementById("rTotal").textContent = questions.length;
+}
+
+function goStart() {
+  document.getElementById("resultScreen").style.display = "none";
+  document.getElementById("quizScreen").style.display = "none";
+  document.getElementById("startScreen").style.display = "block";
+}
+</script>
+</body>
+</html>
