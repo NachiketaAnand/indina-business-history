@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Indian Fucking Business History </title>
+<title>One Health</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: Georgia, serif; background: #f5f0e8; min-height: 100vh; padding: 20px; color: #1a1a1a; }
@@ -12,13 +12,13 @@
   .header h1 { font-size: 24px; font-weight: normal; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
   .header p { font-size: 13px; color: #555; letter-spacing: 1px; }
   .start-screen { text-align: center; }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
-  .assign-card { background: #fff; border: 1px solid #d0c9bc; padding: 16px; text-align: left; }
-  .assign-card .label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #888; margin-bottom: 6px; }
-  .assign-card .count { font-size: 28px; font-weight: bold; color: #1a1a1a; }
-  .assign-card .sub { font-size: 12px; color: #888; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 24px 0; }
+  .assign-card { background: #fff; border: 1px solid #d0c9bc; padding: 14px; text-align: left; }
+  .assign-card .label { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #888; margin-bottom: 5px; }
+  .assign-card .count { font-size: 26px; font-weight: bold; color: #1a1a1a; }
+  .assign-card .sub { font-size: 11px; color: #888; }
   .filter-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 20px 0; }
-  .filter-btn { padding: 7px 16px; border: 1px solid #bbb; background: #fff; font-family: Georgia, serif; font-size: 13px; cursor: pointer; transition: all 0.15s; }
+  .filter-btn { padding: 7px 14px; border: 1px solid #bbb; background: #fff; font-family: Georgia, serif; font-size: 13px; cursor: pointer; transition: all 0.15s; }
   .filter-btn:hover { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
   .filter-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
   .start-btn { padding: 13px 40px; background: #1a1a1a; color: #fff; border: none; font-family: Georgia, serif; font-size: 15px; cursor: pointer; letter-spacing: 1px; margin-top: 8px; }
@@ -38,9 +38,12 @@
   .opt-btn.correct { background: #e8f5e0; border-color: #4a8a2a; color: #2a5a10; }
   .opt-btn.wrong { background: #fce8e8; border-color: #a83030; color: #6a1515; }
   .opt-btn:disabled { cursor: default; }
+  .reveal-btn { padding: 10px 20px; border: 1px solid #bbb; background: #fff; font-family: Georgia, serif; font-size: 14px; cursor: pointer; }
+  .reveal-btn:hover { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
   .feedback { margin-top: 14px; padding: 10px 14px; font-size: 14px; border-left: 3px solid; }
   .feedback.ok { border-color: #4a8a2a; background: #e8f5e0; color: #2a5a10; }
   .feedback.bad { border-color: #a83030; background: #fce8e8; color: #6a1515; }
+  .feedback.info { border-color: #2a6a9a; background: #e0eef8; color: #1a4a6a; }
   .bottom-row { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; }
   .score-inline { font-size: 13px; color: #888; }
   .next-btn { padding: 10px 28px; background: #1a1a1a; color: #fff; border: none; font-family: Georgia, serif; font-size: 14px; cursor: pointer; }
@@ -57,29 +60,40 @@
   .result-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .outline-btn { padding: 10px 24px; background: #fff; border: 1px solid #1a1a1a; font-family: Georgia, serif; font-size: 14px; cursor: pointer; }
   .outline-btn:hover { background: #f5f0e8; }
+
+  @media (max-width: 500px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .header h1 { font-size: 18px; }
+    .q-text { font-size: 15px; }
+  }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <h1>Indian Fucking Business History</h1>
+    <h1>One Health</h1>
+    <p>Assignment Quiz — All 12 Modules</p>
   </div>
 
   <div class="start-screen" id="startScreen">
     <div class="grid">
-      <div class="assign-card"><div class="label">Assignment 01</div><div class="count">11</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 01</div><div class="count">10</div><div class="sub">questions</div></div>
       <div class="assign-card"><div class="label">Assignment 02</div><div class="count">10</div><div class="sub">questions</div></div>
-      <div class="assign-card"><div class="label">Assignment 03</div><div class="count">9</div><div class="sub">questions</div></div>
-      <div class="assign-card"><div class="label">Assignment 04</div><div class="count">9</div><div class="sub">questions</div></div>
-      <div class="assign-card"><div class="label">Assignment 05</div><div class="count">12</div><div class="sub">questions</div></div>
-      <div class="assign-card"><div class="label">Assignment 06</div><div class="count">11</div><div class="sub">questions</div></div>
-      <div class="assign-card"><div class="label">Assignment 07</div><div class="count">8</div><div class="sub">questions</div></div>
-      <div class="assign-card"><div class="label">Assignment 08</div><div class="count">9</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 03</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 04</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 05</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 06</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 07</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 08</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 09</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 10</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 11</div><div class="count">10</div><div class="sub">questions</div></div>
+      <div class="assign-card"><div class="label">Assignment 12</div><div class="count">10</div><div class="sub">questions</div></div>
     </div>
     <p style="font-size:13px;color:#666;margin-bottom:16px;">Select a set or attempt all questions:</p>
     <div class="filter-row" id="filterRow">
-      <button class="filter-btn active" onclick="setFilter('all',this)">All 79</button>
-      <button class="filter-btn" onclick="setFilter('quick',this)">Quick Test (10 Qs)</button>
+      <button class="filter-btn active" onclick="setFilter('all',this)">All 120</button>
+      <button class="filter-btn" onclick="setFilter('quick',this)">Quick Test (20 Qs)</button>
       <button class="filter-btn" onclick="setFilter('01',this)">Assignment 01</button>
       <button class="filter-btn" onclick="setFilter('02',this)">Assignment 02</button>
       <button class="filter-btn" onclick="setFilter('03',this)">Assignment 03</button>
@@ -88,6 +102,10 @@
       <button class="filter-btn" onclick="setFilter('06',this)">Assignment 06</button>
       <button class="filter-btn" onclick="setFilter('07',this)">Assignment 07</button>
       <button class="filter-btn" onclick="setFilter('08',this)">Assignment 08</button>
+      <button class="filter-btn" onclick="setFilter('09',this)">Assignment 09</button>
+      <button class="filter-btn" onclick="setFilter('10',this)">Assignment 10</button>
+      <button class="filter-btn" onclick="setFilter('11',this)">Assignment 11</button>
+      <button class="filter-btn" onclick="setFilter('12',this)">Assignment 12</button>
     </div>
     <button class="start-btn" onclick="startQuiz()">Begin Test →</button>
   </div>
@@ -98,7 +116,7 @@
       <div class="progress-text" id="progressText">0 / 0</div>
     </div>
     <div class="badge" id="assignBadge">Assignment 01</div>
-    <div class="q-num" id="qNum">Question 1 of 79</div>
+    <div class="q-num" id="qNum">Question 1 of 120</div>
     <div class="q-text" id="qText"></div>
     <div class="options" id="optionsDiv"></div>
     <div id="feedbackDiv"></div>
@@ -109,106 +127,159 @@
   </div>
 
   <div class="result-screen" id="resultScreen">
-    <h2>Test Complete</h2>
+    <h2>Quiz Complete</h2>
     <div class="big-score" id="bigScore">0%</div>
     <div class="grade" id="gradeText"></div>
     <div class="result-grid">
       <div class="result-card"><div class="rnum" id="rCorrect">0</div><div class="rlbl">Correct</div></div>
-      <div class="result-card"><div class="rnum" id="rWrong">0</div><div class="rlbl">Incorrect</div></div>
+      <div class="result-card"><div class="rnum" id="rWrong">0</div><div class="rlbl">Wrong</div></div>
       <div class="result-card"><div class="rnum" id="rTotal">0</div><div class="rlbl">Total</div></div>
     </div>
     <div class="result-btns">
-      <button class="outline-btn" onclick="goStart()">← Menu</button>
-      <button class="start-btn" onclick="startQuiz()">Retry</button>
+      <button class="outline-btn" onclick="goStart()">← Back to Menu</button>
+      <button class="start-btn" onclick="startQuiz()">Retry Same Set</button>
     </div>
   </div>
 </div>
 
 <script>
 const Q = [
-  {a:"01",q:"A historian studying the same period of Indian business history as another historian may arrive at different conclusions primarily because:",o:["The lectures provided to them were incomplete.","Their personal research interests and the sources they prioritise differ, leading to selective emphasis on different types of evidence.","One historian is more competent than the other.","Historical facts change over time."],ans:1},
-  {a:"01",q:"Oral history sources differ from traditional printed archival sources in that they:",o:["Provide evidence exclusively from the contemporary period, and cannot inform understanding of past centuries.","Rely on human testimonies and recorded interviews, which capture perspectives and details that may not be documented in official written records.","Are stored in archives, whereas printed sources are kept in libraries.","Require less rigorous verification and interpretation by historians compared to written documents."],ans:1},
-  {a:"01",q:"An archive, in the context of historical research, can be defined as:",o:["An institutional repository—formal or informal—of documents and materials that historians use to reconstruct past events and understand historical processes.","A collection of published books and articles written by historians about past events.","A physical space where only government-produced official records are stored and made available to the public.","A digital database that automatically organises historical information without requiring a historian's interpretation."],ans:0},
-  {a:"01",q:"The rapid political fragmentation of the Mughal Empire after 1707 had which of the following consequences for economic activity in the Indian subcontinent?",o:["It led to increased trading opportunities and economic prosperity.","It resulted in the dissolution of centralised authority, which disrupted unified regional markets and restricted business opportunities.","It strengthened the infrastructure for commercial operations.","It had no significant impact on economic conditions."],ans:1},
-  {a:"01",q:"Why is periodisation considered a complicated task in history?",o:["Historical events do not always follow a linear pattern; conditions and patterns often recur across different periods, making clear boundaries difficult to establish","Most historians now reject periodisation entirely in favour of studying continuous historical processes without any temporal divisions","Periodisation is a recent invention that historians still haven't learned to use properly","New sources discovered in recent decades have made all existing historical periods completely invalid"],ans:0},
-  {a:"01",q:"Trading records and shipping manifests from mercantile enterprises are valuable historical sources because they reveal:",o:["Only the prices of commodities that were traded.","Evidence of commodity exchange, as well as the political relationships and power dynamics that shaped economic activities.","The personal preferences of individual merchants.","Information that is irrelevant to understanding history."],ans:1},
-  {a:"01",q:'The absence of infrastructure "in the Western sense" in the Indian subcontinent during the later Mughal period meant that:',o:["Economic activity remained localised within isolated regional markets without institutional connectivity across the subcontinent","The state lacked the capacity to enforce uniform standards for weights, measures, and currency, fragmenting inter-regional trade mechanisms","Physical infrastructure, like roads and harbours, did not exist, limiting most forms of commerce","Market efficiency was determined primarily by geographical distance rather than regulatory or institutional factors"],ans:1},
-  {a:"01",q:'The geographical question of where India\'s business history "begins" is problematic because:',o:["Historical evidence only exists for business activities in northern India during the Mughal period","Historians have only recently begun studying regional business centres outside of major colonial cities","Different areas of the subcontinent contributed distinctly to India's commercial networks at different historical moments, so no single region can be identified as the sole origin","Maritime trade was less significant than land-based trade routes in shaping India's business history"],ans:2},
-  {a:"01",q:"Business culture, as a component of Indian business history, refers to:",o:["The religious practices of merchants.","A society's attitudes toward entrepreneurship and the values it assigns to business communities, which shape the flourishing or decline of economic enterprises.","The physical appearance of markets and shops.","Only the food preferences of business owners."],ans:1},
-  {a:"01",q:"The establishment of the East India Company's first warehouse/factory at Surat in 1608 is considered significant because it:",o:["Was the first instance of any trade occurring between Europe and India.","Marked the beginning of institutionalised European business operations in India, distinct from earlier sporadic trader visits.","Ended all indigenous Indian business activities.","Had no long-term impact on the Indian economy."],ans:1},
-  {a:"01",q:"India's current maritime and economic partnerships with regions such as Southeast Asia and West Asia can be understood as:",o:["Completely new developments with no historical precedent.","Solely the result of 20th-century colonisation.","Continuations of centuries-old maritime trading traditions that existed before European arrival in India.","Irrelevant to understanding Indian business history."],ans:2},
-  {a:"02",q:"In which year did the East India Company's monopoly over Indian trade end, allowing independent merchants and traders to establish their own trading ventures and financial institutions?",o:["1813","1765","1857","1776"],ans:0},
-  {a:"02",q:"When did the East India Company first gain the right to collect revenue (diwani) in Bengal and Bihar?",o:["1795","1813","1765","1757"],ans:2},
-  {a:"02",q:"The Royal Charter granted to the East India Company in 1600 served as:",o:["A legal, state-backed document that authorised the EIC to conduct overseas trading operations and engage in commercial activities in non-British markets.","A religious mandate from the Church of England.","A guarantee of military support from the British Crown.","A declaration of war against the Mughal Empire."],ans:0},
-  {a:"02",q:"During the Industrial Revolution in Britain, the transformation of labour organisation in factory settings involved:",o:["Exclusively replacing human workers with machines, eliminating the need for labour management systems.","The systematic organisation of workers into timetables, wage systems, and production schedules designed to maximise manufacturing output for domestic and international markets.","Maintaining traditional craft production methods while introducing new energy sources.","Voluntary participation by labourers without any formal organisational structures."],ans:1},
-  {a:"02",q:"The process of de-industrialisation in India during the 1700-1850 period was primarily driven by:",o:["Deliberate policies of the Indian regional kingdoms to abandon textile manufacturing.","The flood of cheaper, machine-made British textiles into Indian markets, which displaced indigenous artisans and caused immiseration—economic impoverishment, including loss of wages, markets, and occupations.","The preference of Indian merchants to abandon manufacturing in favor of agricultural pursuits.","A natural decline in demand for Indian goods across Europe without external factors."],ans:1},
-  {a:"02",q:"The triangular trade system employed by the East India Company (opium to China → tea purchase → sale in Europe) was economically advantageous primarily because it:",o:["Provided equal economic benefits to all parties involved in the exchange.","Eliminated competition from other European trading companies.","Required large quantities of British capital and silver to be transported abroad for each transaction.","Allowed the EIC to extract profits while relying almost entirely on Indian resources and labor, thereby preventing precious metals and capital from leaving Britain."],ans:3},
-  {a:"02",q:"Forbes & Co., established in 1767, represented which of the following?",o:["One of the oldest Agency Houses in the western subcontinent, marking the emergence of a new European banking and financial institution model.","An Indian-owned merchant company predating European settlement.","A purely agricultural enterprise with no involvement in international trade.","The first government-owned trading enterprise in India."],ans:0},
-  {a:"02",q:"Speculation in Agency House business operations during this period can best be described as:",o:["Conservative, low-risk investment strategies based on proven market demand.","A form of gambling with no legitimate economic purpose.","High-risk investments in enterprises such as indigo cultivation and tobacco export based on projected future earnings rather than established market realities, exposing investors to significant losses if international circumstances changed.","Investment decisions made entirely without any analytical framework or projection methods."],ans:2},
-  {a:"02",q:"The concentration of Agency Houses in specific port cities such as Calcutta, Bombay, and Madras can be understood as a reflection of:",o:["Random choice by merchants with no rational economic basis.","Restrictions imposed by the EIC preventing merchants from settling in inland areas.","The superior climate and geography of port cities for business operations.","The principle that capital gravitates toward centers of political and financial control."],ans:3},
-  {a:"02",q:"Which among the following best describes why Agency Houses struggled to maintain institutional stability across different regions?",o:["The Jagat Seths monopolized all banking services and refused to cooperate with European firms.","The absence of uniform legal frameworks, accounting standards, and regulatory oversight allowed individual agency houses to operate independently without accountability.","Asian trading markets were inherently unstable and could not support any form of organized financial institution.","Regional Indian governments actively prevented European merchants from establishing standardized business practices."],ans:1},
-  {a:"03",q:"The first railway link in India was developed between _______.",o:["Thane and Surat","Bombay and Thane","Bombay and Madras","Bombay and Surat"],ans:1},
-  {a:"03",q:"The primary reason the East India Company invested heavily in the opium trade with China was to:",o:["Generate revenue that could be used to purchase tea from China for resale in European and American markets.","Fulfil a legal obligation established by the British government.","Develop healthcare products for the Chinese population.","Support Indian farmers by guaranteeing them a stable market for opium cultivation."],ans:0},
-  {a:"03",q:"Generate revenue that could be used to purchase tea from China for resale in European and American markets.",o:["BR Ambedkar","M K Gandhi","Pandit Jawaharlal Nehru","Dadabhai Naoroji"],ans:3},
-  {a:"03",q:"Dadabhai Naoroji is famous for which economic theory?",o:["Drain Theory","Neo-Marxist Theory","Cultural Theory","None of the above"],ans:0},
-  {a:"03",q:"Under which treaty/alliance was Bombay transferred to Britain by the Portuguese?",o:["None of the above","Anglo-Portuguese Treaty","The marital alliance between England and Portugal","The Peace of Westphalia"],ans:2},
-  {a:"03",q:"Calcutta was designated as the capital of British India in which year?",o:["1773","1800","1765","1750"],ans:0},
-  {a:"03",q:"The American Civil War (1861-1865) affected Bombay's economy by:",o:["Disrupting American cotton supplies to Britain, creating demand for raw cotton from the Bombay Presidency.","Destroying Bombay's opium trade permanently.","Reducing British interest in Indian commerce.","Introducing entirely new industries unrelated to previous trades."],ans:0},
-  {a:"03",q:"Which community emerged as the wealthiest in Bombay during 1750-1850?",o:["Anglo-Indian businessmen","Parsi community","Marwadi traders","Muslim traders from Kutch"],ans:1},
-  {a:"03",q:"Cotton textile mills in Bombay and Ahmedabad during the mid-nineteenth century were characterized by:",o:["Absence of any technological innovation.","Exclusively British ownership and management.","Complete dependence on foreign technological expertise for all operations.","Collaboration between Indian and British capital, with many mills eventually under Indian ownership."],ans:3},
-  {a:"04",q:"When was the Indian National Congress established?",o:["1947","1857","1885","1905"],ans:2},
-  {a:"04",q:"Which of the following best describes the reasons behind the Swadeshi Movement?",o:["Greater realization that colonial trade practices benefited only the British state","Imposition of tariff barriers and British tax policies favoring British industries","British government's tax actions provoking political anger among Indians","All of the above"],ans:3},
-  {a:"04",q:"Swadeshi Mills was founded by __________.",o:["Jehangir Ratanji Dadabhoy Tata","Rama Prasad Goenka","Jamshedji Tata","Azim Hashim Prem"],ans:2},
-  {a:"04",q:"When was the Punjab National Bank established?",o:["1894","1889","1901","1895"],ans:0},
-  {a:"04",q:"Gopal Krishna Gokhale was the founder of __________.",o:["Prarthana Samaj","None of the above","Servants of India Society","Ramakrishna Mission"],ans:2},
-  {a:"04",q:"The deregulation of the Mineral Policy in 1899 primarily opened which sector to Indian entrepreneurs?",o:["Coal mining and mineral extraction","Textile manufacturing","Shipping and maritime commerce","Cotton trade"],ans:0},
-  {a:"04",q:"The Tata Iron and Steel Company was formally registered in which year?",o:["1903","1907","1899","1911"],ans:1},
-  {a:"04",q:"The Taj Mahal Hotel, opened by the Tatas in 1903, was significant because:",o:["It marked the end of British control over the hospitality industry","It was the first hotel built in India","It was the first luxury hospitality venture entirely managed and financed by an Indian entrepreneur","It was built to cater exclusively to British officials"],ans:2},
-  {a:"04",q:"Which Indian business house opened its first export office in London in 1917?",o:["The Tata Group","The Birla Group","The Reliance Group","The Godrej Group"],ans:1},
-  {a:"05",q:"Which among the following statements about the First World War is false?",o:["Being a stable, wealth-producing colony, India did not get involved in the World War","It led to a boom in business and manufacturing to help war efforts","Imperialism and colonialism were major factors behind making a European war into a world conflict","Many Indian business houses emerged to supplement domestic demand"],ans:0},
-  {a:"05",q:"Why did the assassination of the Austrian Duke and Duchess in 1914 lead to a world war?",o:["The assassination disrupted international trade routes, forcing economic warfare","It activated the European alliance systems, creating a \"domino effect\" of declarations of war","Germany used the incident to justify territorial expansion into Asia","Austria-Hungary immediately declared war on all European powers"],ans:1},
-  {a:"05",q:"Which among the following statements regarding post-World War developments in Indian business landscape is false?",o:["There was expansion and diversification of Indian industrial capital, leading to gradual displacement of British capital by Indian capital","None of the above","An Indian Industrial Commission was set up to provide preferential treatment to British enterprises and control emerging Indian businesses","The formalization of entrepreneurs' economic influence into political and executive spheres was an important feature"],ans:2},
-  {a:"05",q:"Which country among the following was an Axis power during the Second World War?",o:["France","The USSR","United States of America","Japan"],ans:3},
-  {a:"05",q:"When did Mahatma Gandhi launch the Quit India Movement?",o:["1942","1941","1945","1935"],ans:0},
-  {a:"05",q:"The Oberoi Group was involved in which sector?",o:["Textile","Hospitality","Automobile","Aviation"],ans:1},
-  {a:"05",q:"Walchand Hirachand was associated with which enterprise?",o:["The DCM Group","Hindustan Aircraft Factory","Tata Airlines","Taj Hotel"],ans:1},
-  {a:"05",q:"Which of the following statements regarding post-1945 Indian business scenario is true?",o:["Post-1945 years saw the rise of multinational companies through Indian and Western capital collaboration","New people and regions of India entered the Indian business that were not significant previously","Neither of the options is true","Both the options are true"],ans:3},
-  {a:"05",q:"Which of the following statements about the shift of India's capital to New Delhi is true?",o:["It was announced in 1911 at the Delhi Durbar by the British sovereign","It was a political strategy to move away from radical politics in Calcutta","It involved the construction of Lutyens Delhi from 1911 to 1931","All of the above"],ans:3},
-  {a:"05",q:"The Mahindra and Muhammad group (later Mahindra and Mahindra) was primarily involved in which sector when established in 1945?",o:["Steel imports","Heavy engineering goods","Automobile Manufacturing","All of the above"],ans:3},
-  {a:"05",q:'Which among the following best describes the concept of "discriminating protection" in post-First World War India?',o:["It aimed to control and limit emerging Indian businesses","It protected British industries from Indian competition","It imposed protective duties on Indian industries like steel to safeguard them from foreign competition during wartime","None of the above"],ans:2},
-  {a:"05",q:"Which of the following statements about the Montague-Chelmsford Reforms of 1919 are true?",o:["They introduced bicameral legislatures in Indian provinces","They classified subjects of governance into center reserved, state list, and concurrent categories","They granted voting rights to all Indian citizens","Both A and B"],ans:3},
-  {a:"06",q:"Which among the following was not an objective of the National Planning Committee (NPC)?",o:["Doubling living standards in 10 years","National Self-Sufficiency","Strong state role in the economy","Profit before service"],ans:3},
-  {a:"06",q:"Which among the following statements is true?",o:["The second five-year plan was drafted by PC Mahalanobis","The focus of the second five-year plan was agricultural growth","The focus of the first five-year plan was industrial growth","None of the above"],ans:0},
-  {a:"06",q:"Which among the following was not a feature of the Bombay Plan (1944)?",o:["Government should focus on monopoly market development rather than large-scale planning","Poverty alleviation must be an important focus","Private sector should play a fair role supplemented by the public sector","State must focus on removal of inequality from society"],ans:0},
-  {a:"06",q:"Which among the following was not a feature of the Industrial Policy Resolution of 1956?",o:["It led to a three-fold division of industries","Focus was laid upon regional development","It focused on reduction of economic disparities","The central focus was developing Indian consumer goods industries"],ans:3},
-  {a:"06",q:"Who was responsible for the nationalization of banks in India?",o:["Indira Gandhi","Jawaharlal Nehru","Lal Bahadur Shastri","PC Mahalanobis"],ans:0},
-  {a:"06",q:"Which among the following statements about post-independence critiques of India's planning is false?",o:["Ecological critiques condemned big state projects for environmental and livelihood damage","Marxists criticized Indian planning for failing to involve the state radically and insufficient labor mobilization","Liberal thinkers criticized planning because strong state roles hindered private sector development","Gandhians were happy with heavy industrialization but wanted it only in rural areas"],ans:3},
-  {a:"06",q:"The Diesel Locomotives Works was founded in 1961 in which city?",o:["Varanasi","Lucknow","Asansol","Delhi"],ans:0},
-  {a:"06",q:"Which of the following statements about the First Five-Year Plan are true?",o:["It emphasized agricultural expansion and food security","It received criticism during the 1952 elections for focusing on agriculture","It focused exclusively on industrial growth and heavy industries","Both b and c"],ans:3},
-  {a:"06",q:'The concept of "Schedule A" in the Industrial Policy Resolution of 1956 referred to which type of industries?',o:["Industries exclusively under state responsibility including heavy industries and defense","Industries under private sector responsibility","Industries reserved for cooperative sector management","Industries under shared state and private sector responsibility"],ans:0},
-  {a:"06",q:"Which among the following were priorities of the Second Five-Year Plan (1956-1961)?",o:["Development of basic heavy industries","To expand the scope of public sector","Focus on health, education, housing, and unemployment reduction","All of the above"],ans:3},
-  {a:"06",q:"Which among the following statements about the impact of India's independence and partition on planning is true?",o:["Independence eliminated the need for economic planning","Partition and refugee crisis made planning essential for rehabilitation and stabilization","Planning concepts originated solely after 1947","Both A and C"],ans:1},
-  {a:"07",q:"Which among the following was not a feature of \"License Raj\"?",o:["Official directives controlled economic and commercial operations in India","It restricted businesses to safeguard the state's role in extending critical services","It was unanimously praised by Indian business houses as the most important policy for private sector development","All of the above"],ans:2},
-  {a:"07",q:"Which of the following statements regarding 1950s-1960s are true?",o:["MNCs and foreign businesses exited the Indian market due to prevailing uncertainty","Many Indian business houses started investing in markets outside India","Both A and B","Neither A nor B"],ans:2},
-  {a:"07",q:"Which statements regarding the Monopolies and Restrictive Trade Practices Act (1970) are true?",o:["Business groups with assets more than Rs 200 crore could not expand","It aimed to ensure key sectors do not fall prey to monopoly concentration","Both A and B","Neither A nor B"],ans:2},
-  {a:"07",q:"Which among the following statements regarding Industrial Licensing Policy 1970 is true?",o:["Industries were divided among four groups based on investment levels","In heavy investment industries, government decided ownership on a case-by-case basis","All industries with capital less than Rs 1 crore were delicensed","Middle investment industries used a licensing system"],ans:0},
-  {a:"07",q:"Operation Flood is:",o:["A scheme to control flood water","A mission programme for milk production and distribution","A scheme for irrigation distribution","None of these"],ans:1},
-  {a:"07",q:"Which of the following best describes the \"white revolution\"?",o:["Government takeover of dairy industries","Social, cultural, institutional, and ideological transformation focused on food security and gender equality","Exclusive urban dairy development","Increased milk production and distribution"],ans:1},
-  {a:"07",q:"The 1971 general elections in Indian politics are significant because:",o:["They marked a generational shift in Indian political leadership","New leaders brought fresh economic visions and social mobilization ideas","They influenced subsequent industrial policy frameworks","All of the above"],ans:3},
-  {a:"07",q:"Which among the following statements regarding the 1970s-1980s economic context is false?",o:["Bank nationalization aimed to extend rural banking services","Licensing policies were relaxed to encourage private sector growth","New sectors like textiles successfully adapted to licensing regimes","Political contexts shaped economic and entrepreneurial reforms"],ans:1},
-  {a:"08",q:"Which among the following were the primary reasons for undertaking economic liberalization in India during the 1990s?",o:["Dwindling foreign reserves and sagging exports","Need to dismantle inhibitory licensing and regulatory frameworks","Both a and b","None of the above"],ans:2},
-  {a:"08",q:"Which individual served as a Planning Commission member and RBI Governor, playing a key institutional role in reforms?",o:["C. Rangarajan","Montek Singh Ahluwalia","N.R. Narayan Murthy","Rajiv Gandhi"],ans:0},
-  {a:"08",q:"Infosys was founded in which year?",o:["1999","1991","1982","1975"],ans:2},
-  {a:"08",q:"The \"demonstration effect\" in the post-1991 software industry refers to:",o:["Only government enterprises succeeding","Government demonstrating superior planning","Infosys's early success inspiring other IT companies to emerge","Software companies demonstrating loyalty to government"],ans:2},
-  {a:"08",q:"Which sectors exhibited symbiotic relationships in the post-liberalization period?",o:["Automobile and insurance sectors","Software and BPO/E-commerce sectors","Banking and telecommunications sectors","All of the above"],ans:3},
-  {a:"08",q:"Which global paradigm most decisively influenced India's shift toward liberalization?",o:["European subsidies","Chinese agricultural exports","Japanese industrial dominance","US-led liberal capitalism post-Cold War"],ans:3},
-  {a:"08",q:"The rise of India's private sector post-1991 was driven by which cultural shift?",o:["Entrepreneurs seen as providers of employment","Business success viewed as demonstration of individual potential","Entrepreneurship perceived as patriotic activity","All of the above"],ans:3},
-  {a:"08",q:"Which of the following sectors did NOT significantly benefit from 1991 liberalization?",o:["Software and IT services","Telecommunications","Private healthcare","All these sectors benefited significantly"],ans:3},
-  {a:"08",q:"One of the primary aims of studying Indian business history is:",o:["Assimilation of historical facts","To be equipped with analytical tools to understand contemporary issues while recognising historical roots","To criticize all forms of business","To prove India's past was glorious"],ans:1}
+  // Assignment 01
+  {a:"01",q:"Which of the following statements is true for One Health?",o:["It simplifies healthcare by focusing only on human health.","It helps prevent and control diseases at the human-animal environment interface.","Its primary goal is to cure diseases in domestic animals.","It's a concept limited to veterinary medicine."],ans:1},
+  {a:"01",q:"Which department comes under One Health?",o:["Animal Health","Human Health","Environmental Health","All of the above"],ans:3},
+  {a:"01",q:"The Quadripartite was made to strengthen the Global One Health Governance. When was it formed?",o:["2020","2021","2022","2023"],ans:2},
+  {a:"01",q:"Name the German scholar from the mid 1800's, who was an early proponent of One Health?",o:["Rudolf Virchow","Calvin Schwabe","Lonnie King","None of the above"],ans:0},
+  {a:"01",q:"In the Disciplinary Jargon, which Disciplinary represents a Mixed-Up Salad?",o:["Interdisciplinary","Multidisciplinary","Intradisciplinary","Cross-disciplinary"],ans:1},
+  {a:"01",q:"In the ABC of Applying the Principles of Ethics, A stands for ________?",o:[],ans:"Apophenia",type:"text"},
+  {a:"01",q:"Which of the following statements is true for One Health? (II)",o:["It simplifies healthcare by focusing only on human health.","It helps prevent and control diseases at the human-animal environment interface.","Its primary goal is to cure diseases in domestic animals.","It's a concept limited to veterinary medicine."],ans:1},
+  {a:"01",q:"Which of these have raised the urgency towards One Health Approach?",o:["Increase in Zoonotic disease Outbreaks.","Increase in Food Borne Diseases.","Rise in Anti-Microbial Resistance.","All of the above."],ans:3},
+  {a:"01",q:"Which of these is a Fundamental Principle of Ethics?",o:["Beneficence","Non-maleficence","Autonomy","All of the above"],ans:3},
+  {a:"01",q:"What does WOHC stand for in the context of One Health?",o:["World Organization for Health and Care","Women's Occupational Health Center","World Obesity and Heart Center","World One Health Congress"],ans:3},
+  // Assignment 02
+  {a:"02",q:"Which of the following statements is true for HINI virus?",o:["There was a major outbreak of H1N1 in the year 2009","The source of the outbreak could not be found","The outbreak affected all parts of the world","All of the above"],ans:3},
+  {a:"02",q:"Which year of the following saw the most cases of EBOLA outbreaks?",o:["2014","2015","2016","2019"],ans:0},
+  {a:"02",q:"The highest level of Biosafety Lab-4 is situated in which area?",o:["Pune","Nagpur","Bhubaneswar","Delhi"],ans:0},
+  {a:"02",q:"Which of the following is NOT an impact of Epidemics?",o:["School dropouts","Political instability","Rise in employment","Increase crime rates"],ans:2},
+  {a:"02",q:"Global One Health Joint Action Plan was published on?",o:["17.10.2022","18.10.2022","19.10.2022","20.10.2022"],ans:0},
+  {a:"02",q:"The Key for One Health is?",o:["Collaborating","Communicating","Coordinating","All of the above"],ans:3},
+  {a:"02",q:"At the time when the pathogen is spilling over through vector, wildlife or domestic animals, which process will help prevent this?",o:["Rapid response","Early detection","Forecasting Readiness","Controlled operations"],ans:1},
+  {a:"02",q:"What is the full form of ICMR-NIV, Pune?",o:["Indian Council of Medical Research- National Institute of Veterinary, Pune","Indian Council of Medical Research- National Institute of Virology, Pune","Indian Council of Mass Research- National Institute of Velocity, Pune","Indian Cancer Medical Research- National Institute of Virology, Pune"],ans:1},
+  {a:"02",q:"Out of these States, which one had repeated outbreaks of the NIPAH virus?",o:["Odisha","Kerala","Karnataka","Maharashtra"],ans:1},
+  {a:"02",q:"How many mobile BSL-3 labs do we have in India?",o:["13","16","17","19"],ans:1},
+  // Assignment 03
+  {a:"03",q:"In the list of 21st century emerging disease outbreaks, 'H1N1 virus' came in which year?",o:["2009","2010","2011","2012"],ans:0},
+  {a:"03",q:"Which of these conditions does NOT qualify as emerging disease?",o:["A disease appearing in a place for the first time","A disease spreading to new areas","A disease which is affecting uniform number of individuals for some years","A disease which was not known earlier"],ans:2},
+  {a:"03",q:"What is the full form of NIAID?",o:["National Institute of Allergy and Infectious Diseases","National Institute of Allergy and Informed Diseases","National Institute of Energy and Infectious Diseases","National Institute of Emerging and Infectious Diseases"],ans:0},
+  {a:"03",q:"Which of the following are NOT major reservoirs of 21st century outbreaks?",o:["Camels","Bats","Poultry","Elephants"],ans:3},
+  {a:"03",q:"Which among the following are factors contributing to disease emergence?",o:["Climate change","Urbanization","Displacement","All of the above"],ans:3},
+  {a:"03",q:"The method through which several rounds of enquiries for expert opinion is carried out mostly through anonymous forms/questionnaires is called?",o:["Opinion poll","Risk matrix","Analytic hierarchy","Delphi"],ans:3},
+  {a:"03",q:"Human behaviour comes under which of the players in the disease emergence?",o:["Host","Agent","Environment","All of the above"],ans:0},
+  {a:"03",q:"Which among the following is a component of risk assessment?",o:["Risk identification","Risk evaluation","Risk analysis","All of the above"],ans:3},
+  {a:"03",q:"Which method for risk assessment is used when there is a lack of necessary data?",o:["Expert Consultation method","Delphi method","Analytic hierarchy process","Risk matrix method"],ans:2},
+  {a:"03",q:"Diseases which are associated with intent to harm, including mass bioterrorism is called?",o:["Re-emerging infectious diseases","Deliberately emerging infectious diseases","De-emerging infectious diseases","None of the above"],ans:1},
+  // Assignment 04
+  {a:"04",q:"Covid-19 pandemic outbreak began in which year in INDIA?",o:["2019","2020","2021","2022"],ans:1},
+  {a:"04",q:"Virus transmitted from a wild animal to mosquito which then transmits it to a human host. This is an example of which kind of zoonotic spillover?",o:["Direct Spillover","Intermediate by vertebrate","Intermediate by invertebrate","Environment Spillover"],ans:2},
+  {a:"04",q:"What is \"pathogen pressure\" as defined in the slide?",o:["The resistance of a human to a pathogen","The number of humans infected by a pathogen","The amount of a pathogen available to humans at a given point in time and space","The immune response triggered by pathogens"],ans:2},
+  {a:"04",q:"New era of infectious diseases is aided by?",o:["Globalisation","Urbanization","Climate change","All the above"],ans:3},
+  {a:"04",q:"What happens if any of the barriers to crossover are impenetrable?",o:["Spillover will occur easily","The pathogen will mutate","Spillover cannot occur","The pathogen becomes harmless"],ans:2},
+  {a:"04",q:"What is the full form of NVBDCP?",o:["National Vector Borna Disease Control Program","National Viral Borne Disease Control Program","National Vector Borne Disease Control Program","National Vector Borne Disease Cell Program"],ans:2},
+  {a:"04",q:"What is the primary goal of Public Health Disease Surveillance according to the slide?",o:["To treat diseases in hospitals","To store patient records securely","To ensure the right information is available at the right time and place to guide public health decisions","To conduct random health checks on citizens"],ans:2},
+  {a:"04",q:"Which of the following statements is true for Integrated Health Information Platform?",o:["The IHIP is a recent development in the already existing Integrated Disease Surveillance Programme (IDSP).","The IHIP was launched due to the failure of existing IDSP.","The IHIP and IDSP were launched in the same year","None of the above"],ans:0},
+  {a:"04",q:"What is one major challenge in integrating public health surveillance data in India?",o:["Lack of international funding","Working in silos without a mechanism for data integration","Overuse of digital tools","Too many private hospitals"],ans:1},
+  {a:"04",q:"Which of the following can be considered as a gap in the current health system approaches?",o:["Vacancies in District Public Health Labs","Delays in lab confirmation on outbreaks","Lack of advance technology being used to detect outbreaks","All of the above"],ans:3},
+  // Assignment 05
+  {a:"05",q:"Which of the following parasites causes zoonotic malaria infections in parts of south-east Asia?",o:["Plasmodium berghei","Plasmodium ovale","Plasmodium malariae","Plasmodium knowlesi"],ans:3},
+  {a:"05",q:"According to the slide, what percentage of infectious diseases are estimated to be vector-borne?",o:["Approximately 17%","Around 25%","Approximately 50%","Around 75%"],ans:0},
+  {a:"05",q:"What is the causative agent of Japanese encephalitis?",o:["Influenza virus","Japanese encephalitis virus (JEV)","Dengue virus","Herpes simplex virus"],ans:1},
+  {a:"05",q:"What does MRSA stand for?",o:["Methicillin-Resistant Strep Infection","Methicillin-Resistant Staphylococcus aureus","Multi-Resistant Staphylococcus Ailment","Methicillin-Resistant Streptococcus Anginous"],ans:1},
+  {a:"05",q:"Scrub typhus is caused by which bacteria?",o:["Rickettsia rickettsii","Orientia tsutsugamushi","Borrelia burgdorferi","Anaplasma phagocytophilum"],ans:1},
+  {a:"05",q:"Which of the following factors is a biological driver of emerging infectious diseases?",o:["Globalization","Climate change","Evolution of pathogens","Urbanization"],ans:2},
+  {a:"05",q:"Fill in the blank; WHO Global Vector Control Response 2017– ____ plan",o:["2022","2032","2030","2025"],ans:2},
+  {a:"05",q:"Why was the 2009 H1N1 influenza able to cause a pandemic?",o:["It originated from birds with high mortality","It did not cross over to humans","It spread rapidly after crossing over from pigs","It was resistant to all known vaccines"],ans:2},
+  {a:"05",q:"Which of the following is not a social driver of emerging infectious diseases?",o:["Social disruption due to conflict","Climate change","Globalization of food manufacturing","Overcrowding in urban areas"],ans:1},
+  {a:"05",q:"How many species of Anopheles Mosquitoes are found in India?",o:["44","45","46","47"],ans:1},
+  // Assignment 06
+  {a:"06",q:"What is the main purpose of the Food Safety and Standards Act, 2006?",o:["To promote agricultural production","To regulate the manufacturing of drugs","To consolidate food laws and ensure safe food for human consumption","To control prices of food in the market"],ans:2},
+  {a:"06",q:"Which of the following is true to Antimicrobial Stewardship Program?",o:["There a set of Coordinated Interventions","Ensure patient's optimal treatment","Reduce inappropriate use of antibiotics","All of the above"],ans:3},
+  {a:"06",q:"Which of the following is an example of Chemical Hazard?",o:["Bacteria","Cigarettes","Glass","Adulterants"],ans:3},
+  {a:"06",q:"The Antimicrobial Resistance Surveillance and Research Network (AMRSN) initiative was launched in the year?",o:["2013","2014","2015","2016"],ans:0},
+  {a:"06",q:"What is a common source of E. coli contamination?",o:["Canned vegetables","Undercooked meat and unpasteurized milk","Raw eggs","Frozen fruits"],ans:1},
+  {a:"06",q:"What is Antibiotic Stewardship?",o:["Promotion of antibiotic use in healthcare settings","Restricting use of antibiotic in healthcare settings","A coordinated effort to optimize the use of antibiotics to treat infections and reduce the development of antibiotic resistance.","Encouraging over-the-counter sale of antibiotic"],ans:2},
+  {a:"06",q:"In which year was the Food Safety and Standards Act enacted in India?",o:["2005","2006","2007","2008"],ans:1},
+  {a:"06",q:"How will the collaboration help improve outbreak response for AMR infections?",o:["By banning all antibiotics in hospitals","By enhancing laboratory surveillance of AMR pathogens","By closing small healthcare centers","By outsourcing healthcare to private providers"],ans:1},
+  {a:"06",q:"Foodborne illnesses caused by bacteria, viruses, parasites, and fungi are examples of_____",o:["Physical hazards","Chemical hazards","Biological hazards","Radiological hazards"],ans:2},
+  {a:"06",q:"Food Safety is fundamental to which of the following Sustainable Development Goals?",o:["1","8","12","All of the above"],ans:3},
+  // Assignment 07
+  {a:"07",q:"What is essential for successful public health interventions according to the One Health approach?",o:["Individual treatment plans","Cooperation between doctors only","Cooperation of human, animal, and environmental health partners","Increased use of technology"],ans:2},
+  {a:"07",q:"WHO identifies five phases of infectious disease emergence. Which of the following are in the correct order?",o:["Pre-emergence, Epidemic, Emergence, Localised Transmission, Pandemic","Pre-emergence, Emergence, Localised Transmission, Pandemic, Epidemic","Pre-emergence, Emergence, Localised Transmission, Epidemic, Pandemic","Pre-emergence, Pandemic, Emergence, Localised Transmission, Epidemic"],ans:2},
+  {a:"07",q:"Where and when was KFD first identified?",o:["In a human in Kerala, 1965","In a sick monkey in Kyasanur Forest of Karnataka, 1957","In a deer in Tamil Nadu, 1975","In a rat in Maharashtra, 1962"],ans:1},
+  {a:"07",q:"Which of the following strategies are needed for successful implementation of multi-sectoral One Health initiatives?",o:["Strong political will and commitment","Inter-sectoral collaboration","Adequate funding","All of the above"],ans:3},
+  {a:"07",q:"Which of these modes is a direct transfer of zoonotic disease?",o:["Saliva","Blood","Mucous","All of the above"],ans:3},
+  {a:"07",q:"One Health recommends public and animal health systems that are:",o:["Focused only on emergency care","Based on ancient traditional medicine","Compliant with international standards with long-term intervention goals","Limited to private institutions"],ans:2},
+  {a:"07",q:"OHHLEP stands for?",o:["One Health Huge-Level Expert Panel","One Health High-Level Expert Panel","One Health Healthy-Level Expert Panel","One Health Human-Level Expert Panel"],ans:1},
+  {a:"07",q:"Why is strengthening national and international emergency response important under One Health?",o:["To promote economic growth","To reduce public spending","To prevent and control disease outbreaks","To limit population movement"],ans:2},
+  {a:"07",q:"How does the 'One Health' approach benefit future health systems?",o:["It eliminates the need for human medicine","It focuses only on economic development","It helps prevent pandemics and builds more resilient and equitable systems","It focuses solely on urban healthcare infrastructure"],ans:2},
+  {a:"07",q:"Which interface is emphasized for preventive action in the One Health strategy?",o:["Human-technology interface","Human-animal-ecosystem interface","Animal-laboratory interface","Hospital-community interface"],ans:1},
+  // Assignment 08
+  {a:"08",q:"What are the reasons for 'One Health' attention in India?",o:["21.54% of area is forested of the country","Increasing consumption of antibiotics","Huge wet market sector and industrial animal trade","All of the above"],ans:3},
+  {a:"08",q:"A zoonotic infection/disease is ____.",o:["an infection or disease that can be transmitted from an insect to another insect","an infection or disease that can be transmitted from an animal to an insect","an infection or disease that can be transmitted from an animal to another animal","an infection or disease that can be transmitted from an animal to a human"],ans:3},
+  {a:"08",q:"Partnerships, governance and workforce development, resource allocation and leadership are all required for:",o:["Individual development","Community participation","Capacity building","Health Education"],ans:1},
+  {a:"08",q:"In the levels of community participation, 'Community-owned' is which level?",o:["Level 1","Level 2","Level 3","Level 4"],ans:3},
+  {a:"08",q:"This approach is based on the assumption that humans are rational decision-makers and relies heavily upon the provision of information about risks and benefits of certain behaviors.",o:["Behavior change approach","Community development approach","Biomedical approach","None of these"],ans:0},
+  {a:"08",q:"What are the principals of Community participation?",o:["Trust, accessibility","Contextualization, autonomy","Equity, transparency","All of the above"],ans:3},
+  {a:"08",q:"Which of the following is not a principle of community engagement process?",o:["Equity","Trust","Direction","Autonomy"],ans:2},
+  {a:"08",q:"First outbreak of Nipah was reported in which year?",o:["2015","2017","2018","2021"],ans:2},
+  {a:"08",q:"NOHP-PCZ full form is?",o:["National One Health Programme for Prevention and Control of Zoonoses","National One Health Parameter for Prevention and Control of Zoonoses","National One Health Programme for Precaution and Control of Zoonoses","National One Health Programme for Prevention and Combat of Zoonoses"],ans:0},
+  {a:"08",q:"_____ approach to health promotion aims to improve and promote health by addressing socioeconomic and environmental determinants of health within the community.",o:["Behavior changes","Community development","Biomedical","None of these"],ans:1},
+  // Assignment 09
+  {a:"09",q:"An index case may or may not be same as the First case?",o:["True","False"],ans:0},
+  {a:"09",q:"Under which category of study design does the cross-sectional come?",o:["Observational Analytical","True Experimental","Observational Descriptive","Quasi Experimental"],ans:0},
+  {a:"09",q:"Choice of the appropriate study design depends on?",o:["Research Question","Funds available","Time period available to complete the study","All of the above"],ans:3},
+  {a:"09",q:"Which one of the following is NOT an observational study design?",o:["Ecological study","Cluster randomized trial","Case-control study","Cohort study"],ans:1},
+  {a:"09",q:"What does RRS stand for in the context of emergency medical care?",o:["Radiology Reporting System","Rapid Recovery System","Remote Resuscitation System","Rapid Response System"],ans:3},
+  {a:"09",q:"Which of the following is the apex body for disaster management in India?",o:["National Institute of Disaster Management","Ministry of Home Affairs","National Executive Committee","National Disaster Management Authority"],ans:3},
+  {a:"09",q:"What is a common immediate effect of a natural disaster on a community?",o:["Economic growth","Increased tourism","Infrastructure damage","Social harmony"],ans:2},
+  {a:"09",q:"Bhopal Gas Tragedy is a kind of",o:["Natural disaster","Man-made disaster","Both natural & man-made disaster","None of the above"],ans:1},
+  {a:"09",q:"What are the steps of an outbreak investigation?",o:["Determine existence of outbreak","Search for evidence","Analyse the data gathered","All of the above"],ans:3},
+  {a:"09",q:"Out of the following which is the correct phases of Rapid Response System?",o:["Direction–Activation–Response Assessment–Disposition–Evaluation","Activation–Direction–Response Assessment–Disposition–Evaluation","Direction–Activation–Response Assessment–Evaluation–Disposition","Direction–Response Assessment–Activation–Disposition–Evaluation"],ans:0},
+  // Assignment 10
+  {a:"10",q:"Incidence rate is also called as?",o:["Incidence development","Incidence diversion","Incidence density","Incidence desk"],ans:2},
+  {a:"10",q:"Prevalence is of two types, point and period prevalence.",o:["True","False"],ans:0},
+  {a:"10",q:"What does the incidence refer to?",o:["The occurrence of new cases of disease or injury in a population over an indefinite period of time.","The occurrence of old cases of disease or injury in a population over a specified period of time.","The occurrence of new cases of disease or injury in a population over a specified period of time.","None of the above"],ans:2},
+  {a:"10",q:"Incidence proportion is also called as–",o:["cumulative incidence proportion","initial incidence proportion","final incidence proportion","distributive incidence proportion"],ans:0},
+  {a:"10",q:"What are the functions of descriptive statistics?",o:["to summarize data","to organize data","to simplify data","all the above"],ans:3},
+  {a:"10",q:"Which of the following is a non-probability sampling method?",o:["Simple random sampling","Systematic sampling","Cluster sampling","Judgment sampling"],ans:3},
+  {a:"10",q:"Which of the following steps logically follows data collection, coding, editing, and processing in a research study?",o:["Sampling design formulation","Statistical analysis and report writing","Questionnaire pretesting","Hypothesis formulation"],ans:1},
+  {a:"10",q:"A sampling frame is?",o:["The summary of various techniques of sampling","An outline of all the clusters included in the survey","List of all units in the population from which a sample will be selected","The wooden frame to display tables of random numbers"],ans:2},
+  {a:"10",q:"Which of the following is the primary goal of transformative research?",o:["To ensure that research findings are applicable to all groups within the population","To challenge and address social inequalities faced by marginalized groups","To provide a statistically valid and unbiased representation of the population","To develop theories that apply only to well-represented, dominant groups"],ans:1},
+  {a:"10",q:"Of the following sampling methods, which is based on equal probability?",o:["Convenience sampling","Quota sampling","Simple random sampling","Snowball sampling"],ans:2},
+  // Assignment 11
+  {a:"11",q:"Policy is 'the sum total of government action from signals of intent to the final outcomes.' This definition is given by:",o:["John Mearsheimer","Paul Cairney","Robert Abelson","Alan Abramowitz"],ans:1},
+  {a:"11",q:"Which of the following is part of the Health Policy Triangle?",o:["Agenda Setting","Policy Adoption","Policy Evaluation","All of the above"],ans:3},
+  {a:"11",q:"In the 'Health Policy Triangle', which of the following statements is TRUE?",o:["The Content interacts with the Process","The Context interacts with the Process and Content","All three interact with each other","There is no interaction between the three actors"],ans:2},
+  {a:"11",q:"Agenda Setting is a part of Health Policy Triangle.",o:["True","False"],ans:0},
+  {a:"11",q:"Which of the following statements is not True in case of multi-sectoral framings of One Health?",o:["Eco health and one health are one and the same","Eco health and one health are similar but not same","Planetary health and eco health are related but not same","Planetary health and one health are similar but not same"],ans:0},
+  {a:"11",q:"Situational, cultural and structural factors come under which of the following actors under the Health Policy Triangle?",o:["Content","Context","Process","All of the above"],ans:1},
+  {a:"11",q:"Which of the following statements is True for Health Policy Analysis?",o:["Multi-disciplinary approach to public policy","Aims to explain the interaction between institutions, interests and ideas","Both multi-disciplinary approach to public policy & aims to explain the interaction between institutions, interests and ideas","None of these"],ans:2},
+  {a:"11",q:"Which of the following statements is a definition of Health Policy Analysis?",o:["Health policy analysis aims for separating a problem into its constituent parts so as to better understand its whole.","Health policy analysis is a multi-disciplinary approach to public policy that aims to explain the interaction between institutions, interests and ideas in the policy process.","Both A & B","Neither A nor B"],ans:2},
+  {a:"11",q:"The 'Power Cube' framework of Gaventa J has three frameworks. Which of the following is also called cube?",o:["Levels of power","Spaces of power","Forms of power","None of the above"],ans:0},
+  {a:"11",q:"Which of the following statements is true with regard to implementation of One Health?",o:["Increased political will act as a facilitator for implementation of One Health","Promoting work with non-profits will boost One Health","Making things work at a decentralized level will benefit One Health","All of the above"],ans:3},
+  // Assignment 12
+  {a:"12",q:"Which of these are the enablers of community engagement?",o:["Governance","Leadership","Decision making","All of the above"],ans:3},
+  {a:"12",q:"What does IEC stand for?",o:["Information, education, and communication","Information, education, and community","Involve and engage the community","Instruct, enlighten, and collaborate"],ans:0},
+  {a:"12",q:"How can you assess the impact of your social media efforts?",o:["Asking all followers","Counting the number of posts made","Evaluate the outcome of your campaign against the intended outcome","Comparing your posts with other accounts"],ans:2},
+  {a:"12",q:"What does the \"A\" in CUBE-A trick for an effective key message stand for?",o:["Attractive","Alarming","Audience-focussed","Aggressive"],ans:2},
+  {a:"12",q:"_____'s ladder shows the Degree of Citizen Participation in the chapter for community engagement.",o:["Albert's","Pavlo's","Arnstein's","Arnstan's"],ans:2},
+  {a:"12",q:"Which of the following is NOT a principle of community engagement?",o:["Trust","Equity","Leadership","Autonomy"],ans:2},
+  {a:"12",q:"As per WHO's Community Engagement guidelines of 2020, there are how many levels of community engagement?",o:["3","4","5","6"],ans:2},
+  {a:"12",q:"How can media help in promoting One Health?",o:["Behavior Change","Reinforcement","Change in social norms","All of the above"],ans:3},
+  {a:"12",q:"Which approach is the most desirable but most difficult community engagement approach among the following?",o:["Community-oriented","Community-based","Community-managed","Community-owned"],ans:3},
+  {a:"12",q:"Feedback loop is a two-way process of communication.",o:["True","False"],ans:0}
 ];
 
 let filter = "all", questions = [], cur = 0, answered = false, score = 0, wrong = 0;
-const labels = ["a","b","c","d"];
+const labels = ["a","b","c","d","e"];
 
 function setFilter(f, btn) {
   filter = f;
@@ -220,13 +291,11 @@ function startQuiz() {
   if (filter === "all") {
     questions = [...Q];
   } else if (filter === "quick") {
-    // Shuffle the entire array and slice 10 questions
     let shuffled = [...Q].sort(() => 0.5 - Math.random());
-    questions = shuffled.slice(0, 10);
+    questions = shuffled.slice(0, 20);
   } else {
     questions = Q.filter(q => q.a === filter);
   }
-  
   cur = 0; answered = false; score = 0; wrong = 0;
   document.getElementById("startScreen").style.display = "none";
   document.getElementById("resultScreen").style.display = "none";
@@ -237,52 +306,67 @@ function startQuiz() {
 function renderQ() {
   const q = questions[cur];
   const total = questions.length;
-  document.getElementById("progressFill").style.width = (cur/total*100)+"%";
-  document.getElementById("progressText").textContent = cur+" / "+total;
-  
-  // Show the assignment number even in mixed/quick tests
-  document.getElementById("assignBadge").textContent = filter === "quick" || filter === "all" ? "Assignment " + q.a : "Assignment " + q.a;
-  
-  document.getElementById("qNum").textContent = "Question "+(cur+1)+" of "+total;
+  document.getElementById("progressFill").style.width = (cur / total * 100) + "%";
+  document.getElementById("progressText").textContent = cur + " / " + total;
+  document.getElementById("assignBadge").textContent = "Assignment " + q.a;
+  document.getElementById("qNum").textContent = "Question " + (cur + 1) + " of " + total;
   document.getElementById("qText").textContent = q.q;
   document.getElementById("feedbackDiv").innerHTML = "";
   document.getElementById("nextBtn").style.display = "none";
-  document.getElementById("scoreInline").textContent = score+" correct";
+  document.getElementById("scoreInline").textContent = score + " correct";
   answered = false;
   const div = document.getElementById("optionsDiv");
-  div.innerHTML = q.o.map((opt,i) =>
-    `<button class="opt-btn" onclick="pick(${i})">${labels[i]}. ${opt}</button>`
-  ).join("");
+  if (q.type === "text") {
+    div.innerHTML = `<button class="reveal-btn" onclick="revealAnswer()">Reveal Answer</button>`;
+  } else {
+    div.innerHTML = q.o.map((opt, i) =>
+      `<button class="opt-btn" onclick="pick(${i})">${labels[i]}. ${opt}</button>`
+    ).join("");
+  }
+}
+
+function revealAnswer() {
+  if (answered) return;
+  answered = true;
+  const q = questions[cur];
+  score++;
+  document.getElementById("scoreInline").textContent = score + " correct";
+  document.getElementById("feedbackDiv").innerHTML =
+    `<div class="feedback info">✎ The answer is: <strong>${q.ans}</strong></div>`;
+  document.getElementById("nextBtn").style.display = "block";
+  document.getElementById("nextBtn").textContent = cur < questions.length - 1 ? "Next →" : "See Results →";
+  const div = document.getElementById("optionsDiv");
+  div.innerHTML = `<div style="padding:10px 0;font-size:14px;color:#555;">Fill-in-the-blank question — answer revealed above.</div>`;
 }
 
 function pick(i) {
-  if(answered) return;
+  if (answered) return;
   answered = true;
   const q = questions[cur];
   const btns = document.querySelectorAll(".opt-btn");
   btns.forEach(b => b.disabled = true);
   btns[q.ans].classList.add("correct");
-  if(i !== q.ans) { btns[i].classList.add("wrong"); wrong++; }
+  if (i !== q.ans) { btns[i].classList.add("wrong"); wrong++; }
   else score++;
-  document.getElementById("scoreInline").textContent = score+" correct";
+  document.getElementById("scoreInline").textContent = score + " correct";
   document.getElementById("feedbackDiv").innerHTML =
-    `<div class="feedback ${i===q.ans?'ok':'bad'}">${i===q.ans?"✓ Correct!":"✗ Incorrect — the correct answer is highlighted."}</div>`;
+    `<div class="feedback ${i === q.ans ? 'ok' : 'bad'}">${i === q.ans ? "✓ Correct!" : "✗ Incorrect — the correct answer is highlighted."}</div>`;
   document.getElementById("nextBtn").style.display = "block";
-  document.getElementById("nextBtn").textContent = cur < questions.length-1 ? "Next →" : "See Results →";
+  document.getElementById("nextBtn").textContent = cur < questions.length - 1 ? "Next →" : "See Results →";
 }
 
 function nextQ() {
   cur++;
-  if(cur < questions.length) renderQ();
+  if (cur < questions.length) renderQ();
   else showResult();
 }
 
 function showResult() {
   document.getElementById("quizScreen").style.display = "none";
   document.getElementById("resultScreen").style.display = "block";
-  const pct = Math.round(score/questions.length*100);
-  document.getElementById("bigScore").textContent = pct+"%";
-  document.getElementById("gradeText").textContent = pct>=90?"Excellent!":pct>=70?"Good work!":pct>=50?"Keep practicing!":"Needs more review";
+  const pct = Math.round(score / questions.length * 100);
+  document.getElementById("bigScore").textContent = pct + "%";
+  document.getElementById("gradeText").textContent = pct >= 90 ? "Excellent!" : pct >= 70 ? "Good work!" : pct >= 50 ? "Keep practicing!" : "Needs more review";
   document.getElementById("rCorrect").textContent = score;
   document.getElementById("rWrong").textContent = wrong;
   document.getElementById("rTotal").textContent = questions.length;
